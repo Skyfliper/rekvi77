@@ -381,20 +381,20 @@ document.querySelectorAll('.copy-btn').forEach(attachCopy);
 
 </body>
 <script>
-window.onload = function() {
-  const data = {
-    bank: "ЦЕНТРАЛ БАНК",
-    card: "0000 0000 0000 0000",
-    name: "СОЛИХА АБДУЛЛАЕВА АБДУЛЛАЗИЗ ҚИЗИ"
-  };
-
-  <p>Банк номи: <span id="bank">Загрузка...</span></p>
-  <p>Карта рақами: <span id="card">Загрузка...</span></p>
-  <p>Ф.И.Ш.: <span id="fio">Загрузка...</span></p>
-};
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("bank").textContent = data.bank;
+    document.getElementById("card").textContent = data.card;
+    document.getElementById("fullName").textContent = data.name;
+  })
+  .catch(error => {
+    console.error("Ошибка загрузки data.json:", error);
+  });
 </script>
 
 </html>
+
 
 
 
