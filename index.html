@@ -386,15 +386,17 @@ fetch('data.json')
   .then(data => {
     document.getElementById("bank").textContent = data.bank;
     document.getElementById("card").textContent = data.card;
-    document.getElementById("fullName").textContent = data.name;
+    document.getElementById("fullName").textContent = data.fullName;
   })
   .catch(error => {
     console.error("Ошибка загрузки data.json:", error);
-    document.getElementById("fullName").textContent = data.name;
   });
 </script>
 
+</script>
+
 </html>
+
 
 
 
