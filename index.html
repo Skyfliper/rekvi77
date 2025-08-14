@@ -377,4 +377,17 @@ document.querySelectorAll('.copy-btn').forEach(attachCopy);
 </script>
 
 </body>
+  <script>
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('bankName').textContent = data.bank;
+    document.getElementById('cardNumber').textContent = data.card;
+    document.getElementById('fullName').textContent = data.name;
+  })
+  .catch(error => console.error('Ошибка загрузки JSON:', error));
+</script>
+
 </html>
+
+
