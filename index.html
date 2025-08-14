@@ -378,19 +378,12 @@ document.querySelectorAll('.copy-btn').forEach(attachCopy);
 
 </body>
 <script>
-fetch('./data.json')
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('bank').textContent = data.bank;
-    document.getElementById('card').textContent = data.card;
-    document.getElementById('fullName').textContent = data.fullName;
-  });
-  })
-  .catch(error => {
-    console.error("Ошибка загрузки data.json:", error);
-  });
+<p>Банк номи: <span id="bank">Apexbank</span></p>
+<p>Банк картаси: <span id="card">5614 6837 0528 0774</span></p>
+<p><span id="fullName">Abror Atajanov</span></p>
 </script>
 </html>
+
 
 
 
