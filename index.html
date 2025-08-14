@@ -384,6 +384,7 @@ document.querySelectorAll('.copy-btn').forEach(attachCopy);
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     document.getElementById("bank").textContent = data.bank;
     document.getElementById("card").textContent = data.card;
     document.getElementById("fullName").textContent = data.fio;
@@ -396,6 +397,7 @@ fetch('data.json')
 </script>
 
 </html>
+
 
 
 
