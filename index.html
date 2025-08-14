@@ -378,17 +378,21 @@ document.querySelectorAll('.copy-btn').forEach(attachCopy);
 
 </body>
 <script>
-fetch('data.json')
-  .then(response => response.json())
+fetch('https://raw.githubusercontent.com/Skyfliper/rekvi77/main/data.json')
+  .then(res => res.json())
   .then(data => {
-    console.log(data); // Добавьте эту строку
-    document.getElementById("bank").textContent = data.bank;
-    document.getElementById("card").textContent = data.card;
-    document.getElementById("fullName").textContent = data.fullName;
+    document.getElementById('bank').textContent = data.bank;
+    document.getElementById('card').textContent = data.card;
+    document.getElementById('fullName').textContent = data.fullName;
+  });
   })
   .catch(error => {
     console.error("Ошибка загрузки data.json:", error);
   });
 </script>
+<div>Банк: <span id="bank"></span></div>
+<div>Карта: <span id="card"></span></div>
+<div>Ф.И.Ш.: <span id="fullName"></span></div>
 
 </html>
+
