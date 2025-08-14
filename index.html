@@ -381,17 +381,22 @@ document.querySelectorAll('.copy-btn').forEach(attachCopy);
 
 </body>
 <script>
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('bank').textContent = data.bank;
-    document.getElementById('card').textContent = data.card;
-    document.getElementById('fio').textContent = data.name;
-  })
-  .catch(error => console.error('Ошибка загрузки JSON:', error));
+window.onload = function() {
+  const data = {
+    bank: "ЦЕНТРАЛ БАНК",
+    card: "0000 0000 0000 0000",
+    name: "СОЛИХА АБДУЛЛАЕВА АБДУЛЛАЗИЗ ҚИЗИ"
+  };
+
+  document.getElementById("bank").textContent = data.bank;
+  document.getElementById("card").textContent = data.card;
+  document.getElementById("fullName").textContent = data.name;
+};
 </script>
 
+
 </html>
+
 
 
 
