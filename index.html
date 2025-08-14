@@ -390,10 +390,12 @@ fetch('data.json')
   })
   .catch(error => {
     console.error("Ошибка загрузки data.json:", error);
+    document.getElementById("fullName").textContent = data.name;
   });
 </script>
 
 </html>
+
 
 
 
