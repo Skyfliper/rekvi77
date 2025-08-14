@@ -386,7 +386,7 @@ fetch('data.json')
   .then(data => {
     document.getElementById("bank").textContent = data.bank;
     document.getElementById("card").textContent = data.card;
-    document.getElementById("fio").textContent = data.fio;
+    document.getElementById("fullName").textContent = data.fio;
   })
   .catch(error => {
     console.error("Ошибка загрузки data.json:", error);
@@ -396,6 +396,7 @@ fetch('data.json')
 </script>
 
 </html>
+
 
 
 
